@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ionic App</title>
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4e8ef7">
+
+  <!-- add to homescreen for ios -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <!-- cordova.js required for cordova apps (remove if not needed) -->
+  <script src="cordova.js"></script>
+
+  <!-- un-comment this code to enable service worker
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.error('Error', err));
+    }
+  </script>-->
+
+  <link href="build/main.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Ionic's root component and where the app will load -->
+  <ion-app></ion-app>
+
+  <!-- The polyfills js is generated during the build process -->
+  <script src="build/polyfills.js"></script>
+
+  <!-- The vendor js is generated during the build process
+       It contains all of the dependencies in node_modules -->
+  <script src="build/vendor.js"></script>
+
+  <!-- The main bundle js is generated during the build process -->
+  <script src="build/main.js"></script>
+  <script type="text/javascript" src="https://jwpsrv.com/library/4+R8PsscEeO69iIACooLPQ.js"></script>
+  <script type="text/javascript">jwplayer.key = "gGpS+jTZmHT4xHlTSOhEsuk/Gt9I4gbAdqP1LQ54u8TX2EcxYlzoRA==";</script>
+  <script>
+  function abrirvideo(){
+  var filme = [{file: "https://s3.amazonaws.com/ultrasd/2018+pa5/A+Grande+Jogada+(2017)/A+Grande+Jogada+(2017).mp4",type: "video/mp4"}];
+    var playerInstance = jwplayer("container");
+    playerInstance.setup({
+    width: "100%",
+    height: "100%",
+    title: "Teste Filme",
+    controls: true,
+    displaytitle: true,
+    aspectratio: "16:9",
+    fullscreen: "true",
+    primary: 'html5',
+    provider: 'http',
+    autostart: false,
+    cast: {},
+    image:"http://poltronadecinema.com.br/filmes/wp-content/uploads/2014/07/filmes-online.jpg",
+    sources: filme,
+
+            logo : {file: "",
+                link: "",
+                hide: true,
+            },
+            abouttext: "Yay Scripts",
+            aboutlink: ""
+        });
+      }
+
+
+        </script>
+</body>
+</html>
